@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "kind": "ourbox-apps-collection",
+  "collection_id": "hello-world",
+  "display_name": "Hello World Apps Publisher",
+  "apps": [
+    {
+      "app_id": "hello-world",
+      "display_name": "Hello World",
+      "source_path": "apps/hello-world",
+      "image_repo": "ghcr.io/techofourown/sw-ourbox-apps-hello-world/hello-world",
+      "default_tag": "latest"
+    }
+  ],
+  "notes": "A minimal second publisher repo used to prove multi-repository application catalog consumption."
+}

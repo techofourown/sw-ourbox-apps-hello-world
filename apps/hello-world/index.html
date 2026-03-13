@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello World</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, #fff7ed 0%, #ffedd5 45%, #fb923c 100%);
+        font-family: "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, sans-serif;
+        color: #3f1d0f;
+      }
+
+      .card {
+        width: min(640px, calc(100vw - 32px));
+        padding: 40px 36px;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: 0 24px 80px rgba(124, 45, 18, 0.18);
+        border: 1px solid rgba(255, 237, 213, 0.9);
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 12px;
+        font-weight: 700;
+        color: #ea580c;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: 1.05;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #7c2d12;
+      }
+
+      .host {
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(251, 146, 60, 0.25);
+        font-size: 0.95rem;
+        color: #9a3412;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">OurBox Demo</p>
+      <h1>Hello, world.</h1>
+      <p>
+        This tiny application exists to prove that an OurBox application catalog can
+        consume published images from more than one <code>sw-ourbox-apps-*</code> repo.
+      </p>
+      <p class="host" id="host"></p>
+    </main>
+    <script>
+      document.getElementById("host").textContent = `Served by ${window.location.hostname}`;
+    </script>
+  </body>
+</html>
